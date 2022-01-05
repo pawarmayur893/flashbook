@@ -1,0 +1,91 @@
+<html>
+<head>
+    <title>Suprahyoid Muscles</title>
+    <link rel="stylesheet" href="style/jquery-ui.css"/>
+    <link rel="stylesheet" href="style/hotspot.css"/>
+    <!-- <link rel="stylesheet" href="style/style.css"/> -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/iscroll-zoom.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="js/widgetinit.js"></script>
+    <script type="text/javascript" src="js/hotspot.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body style="margin:0px;">
+    <div class="w-hotspot">
+        <div id="zoomWrapper" class="zoomWrapper">
+            <!-- <div class="dots" style="display:block; position:absolute;left:53px;top:0px;z-index: 1;pointer-events:none;"><img src="images/dots.png"></div> -->
+            <div id="scroller" >                
+                <img class="w-hotspot-img" src="images/base_bw.png" alt="Head and Neck"/>
+                <div class="imageContainer" style="margin-top:50px;">
+                <div id="zoomContainer" >   
+
+                        <div class="imagehighlights">
+                            <div id="bwimg" aria-label="Suprahyoid Muscles" data-img-src='images/base_bw.png' data-id='bw' style='background-image:url("images/base_bw.png")'></div>
+                            <div id="colorimg" aria-label="Suprahyoid Muscles" tabindex="0" data-img-src='images/base_color.png' data-id='color' style='background-image:url("images/base_color.png")'></div>
+                             <div tabindex="0" data-img-src='images/1.png' data-id='1' style='background-image:url("images/1.png")' aria-label="Digastric muscle (anterior and posterior bellies)"></div>
+                             <div tabindex="0" data-img-src='images/1.png' data-id='1_1' style='background-image:url("images/1.png")' aria-label="Digastric muscle (anterior and posterior bellies)"></div>
+                             <div tabindex="0" data-img-src='images/2.png' data-id='2' style='background-image:url("images/2.png")' aria-label="Mastoid process "></div>
+                             <div tabindex="0" data-img-src='images/3.png' data-id='3' style='background-image:url("images/3.png")' aria-label="External acoustic meatus "></div>
+                             <div tabindex="0" data-img-src='images/4.png' data-id='4' style='background-image:url("images/4.png")' aria-label="Styloid process of temporal bone "></div>
+                             <div tabindex="0" data-img-src='images/5.png' data-id='5' style='background-image:url("images/5.png")' aria-label="Coronoid process "></div>
+                             <div tabindex="0" data-img-src='images/6.png' data-id='6' style='background-image:url("images/6.png")' aria-label="Ramus of mandible "></div>
+                             <div tabindex="0" data-img-src='images/7.png' data-id='7' style='background-image:url("images/7.png")' aria-label="Mental foramen"></div>
+                             <div tabindex="0" data-img-src='images/8.png' data-id='8' style='background-image:url("images/8.png")' aria-label="Trochlea for intermediate tendon of digastric muscle"></div>
+                             <div tabindex="0" data-img-src='images/9.png' data-id='9' style='background-image:url("images/9.png")' aria-label="Sternohyoid muscle "></div>
+                             /*<div tabindex="0" data-img-src='images/10.png' data-id='10' style='background-image:url("images/10.png")' aria-label="Omohyoid muscle"></div>*/
+                             <div tabindex="0" data-img-src='images/11.png' data-id='11' style='background-image:url("images/11.png")' aria-label="Thyrohyoid muscle "></div>
+                             <div tabindex="0" data-img-src='images/12.png' data-id='12' style='background-image:url("images/12.png")' aria-label="Mylohyoid muscle "></div>
+                             <div tabindex="0" data-img-src='images/13.png' data-id='13' style='background-image:url("images/13.png")' aria-label="Hyoglossus muscle"></div>
+                             <div tabindex="0" data-img-src='images/14.png' data-id='14' style='background-image:url("images/14.png")' aria-label="Stylohyoid muscle"></div>
+                             
+                            <div data-img-src='images/lines.png' data-id='lines' style='background-image:url("images/lines.png")'></div>
+                            </div>
+                        <div class="labelsdata">
+                            <div id='popup_text_1' class="hotspot_popup" style="top: 338px; left: 473px; width: 100px;">Digastric muscle (anterior and posterior bellies)</div>
+                            <div id='popup_text_1_1' class="hotspot_popup" style="top: 487px; left: 3px; width: 100px;">Digastric muscle (anterior and posterior bellies)</div>
+                            <div id='popup_text_2' class="hotspot_popup" style="top: 50px; left: 412px;">Mastoid process </div>
+                            <div id='popup_text_3' class="hotspot_popup" style="top: 40px; left: 378px;">External acoustic meatus </div>
+                            <div id='popup_text_4' class="hotspot_popup" style="top: 40px; left: 304px;">Styloid process of temporal bone </div>
+                            <div id='popup_text_5' class="hotspot_popup" style="top: 40px; left: 254px; width: 120px;">Coronoid process </div>
+                            <div id='popup_text_6' class="hotspot_popup" style="top: 50px; left: 91px;">Ramus of mandible </div>
+                            <div id='popup_text_7' class="hotspot_popup" style="top: 354px; left: -37px;">Mental foramen</div>
+                            <div id='popup_text_8' class="hotspot_popup" style="top: 527px; left: -12px;">Trochlea for intermediate tendon of digastric muscle</div>
+                            <div id='popup_text_9' class="hotspot_popup" style="top: 567px; left: -3px;">Sternohyoid muscle </div>
+                            <div id='popup_text_10' class="hotspot_popup" style="top: 586px; left: 43px;">Omohyoid muscle</div>
+                            <div id='popup_text_11' class="hotspot_popup" style="top: 554px; left: 346px;">Thyrohyoid muscle </div>
+                            <div id='popup_text_12' class="hotspot_popup" style="top: 479px; left: 416px;">Mylohyoid muscle </div>
+                            <div id='popup_text_13' class="hotspot_popup" style="top: 428px; left: 416px;width: 50px;">Hyoglossus muscle</div>
+                            <div id='popup_text_14' class="hotspot_popup" style="top: 404px; left: 439px;display">Stylohyoid muscle</div>
+                            
+                        </div>
+                        <div class="hotspot">
+                             <div tabindex="0" id="hotspot_1" class="notselected" data-id='1' data-align="Left" data-popup="Digastric muscle (anterior and posterior bellies)" style="position:absolute;left: 436px;top: 362px;">1</div>
+                             <div tabindex="0" id="hotspot_1_1" class="notselected" data-id='1_1' data-align="Left" data-popup="Digastric muscle (anterior and posterior bellies)" style="position:absolute;left: 82px;top: 488px;">1</div>
+                             <div tabindex="0" id="hotspot_2" class="notselected" data-id='2' data-align="Right" data-popup="Mastoid process " style="position:absolute;left: 447px;top: 86px;">2</div>
+                             <div tabindex="0" id="hotspot_3" class="notselected" data-id='3' data-align="Right" data-popup="External acoustic meatus " style="position:absolute;left: 394px;top: 84px;">3</div>
+                             <div tabindex="0" id="hotspot_4" class="notselected" data-id='4' data-align="Right" data-popup="Styloid process of temporal bone " style="position:absolute;left: 343px;top: 84px;">4</div>
+                             <div tabindex="0" id="hotspot_5" class="notselected" data-id='5' data-align="Right" data-popup="Coronoid process " style="position:absolute;left: 274px;top: 84px;">5</div>
+                             <div tabindex="0" id="hotspot_6" class="notselected" data-id='6' data-align="Left" data-popup="Ramus of mandible " style="position:absolute;left: 148px;top: 84px;">6</div>
+                             <div tabindex="0" id="hotspot_7" class="notselected" data-id='7' data-align="Right" data-popup="Mental foramen" style="position:absolute;left: 27px;top: 321px;">7</div>
+                             <div tabindex="0" id="hotspot_8" class="notselected" data-id='8' data-align="Right" data-popup="Trochlea for intermediate tendon of digastric muscle" style="position:absolute;left: 123px;top: 518px;">8</div>
+                             <div tabindex="0" id="hotspot_9" class="notselected" data-id='9' data-align="Right" data-popup="Sternohyoid muscle " style="position:absolute;left: 148px;top: 548px;">9</div>
+                             <div tabindex="0" id="hotspot_10" class="notselected" data-id='10' data-align="Right" data-popup="Omohyoid muscle" style="position:absolute;left: 176px;top: 581px;">10</div>
+                             <div tabindex="0" id="hotspot_11" class="notselected" data-id='11' data-align="Right" data-popup="Thyrohyoid muscle " style="position:absolute;left: 374px;top: 523px;">11</div>
+                             <div tabindex="0" id="hotspot_12" class="notselected" data-id='12' data-align="Right" data-popup="Mylohyoid muscle " style="position:absolute;left: 375px;top: 475px;">12</div>
+                             <div tabindex="0" id="hotspot_13" class="notselected" data-id='13' data-align="Right" data-popup="Hyoglossus muscle" style="position:absolute;left: 374px;top: 429px;">13</div>
+                             <div tabindex="0" id="hotspot_14" class="notselected" data-id='14' data-align="Right" data-popup="Stylohyoid muscle" style="position:absolute;left: 403px;top: 392px;">14</div>
+                             
+                        </div>
+                </div>
+            </div>          
+        </div>          
+        </div>  
+    </div>  
+
+                </body>
+                </html>    
+            
+
+            

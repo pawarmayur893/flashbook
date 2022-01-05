@@ -1,0 +1,264 @@
+.w-hotspot
+{
+  position: relative; 
+  margin: 0 auto;
+  /*height:650px;*/
+  height: 100%;
+  width:auto;
+  max-width: 650px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.w-hotspot  p{
+	padding: 7px;
+}
+.w-hotspot .hotspot-txt{
+    height: 50px;
+}
+.w-hotspot .popup
+{
+    position: absolute;
+    width: 580px;
+    height:5000px;
+    overflow: auto;
+    background-color: rgba(232, 232, 232, 0.92);
+    padding: 5px;
+    padding: 5px;
+    top: 15%;
+}
+.w-hotspot .commentParagraph{
+	border: 1px solid black;
+    background: #d0cdcd;
+}
+.w-hotspot .hotspot .notselected{
+  background: white;
+  z-index: 2;
+}
+
+.w-hotspot .hotspot .selected{
+background: rgb(254,252,234); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, rgba(254,252,234,1) 33%, rgba(241,218,54,1) 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, rgba(254,252,234,1) 33%,rgba(241,218,54,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, rgba(254,252,234,1) 33%,rgba(241,218,54,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}	
+.w-hotspot .hotspot .notselected{
+	background-color: FFF !important;
+}
+.w-hotspot .hotspot > div{
+	/*background-color: FFF;*/
+	border: 2px solid black;
+	border-radius: 25px;
+	text-align: center;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+     cursor: pointer;
+     line-height: 23px;
+     width: 23px;
+     height:23px;
+}
+.w-hotspot .imagehighlights > div{
+ position: absolute;
+ height:680px;
+  width: 100%;
+  left:2px;
+  top:-2px; 
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.w-hotspot .imagehighlights > div > img{
+  width: 100%;
+}
+.w-hotspot .imagehighlights{
+	/*height:680px !important;*/
+	width: 548px;
+}
+
+/* ------------------------------------------------------------------------- MOdel Css ------------------------------------------------------------*/
+
+.w-hotspot .modalbg {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 99999;
+  -moz-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -transition-delay: 0.2s;
+  display: block;
+  pointer-events: none;
+}
+
+.w-hotspot .modalbg .dialog {
+  width: 65%;
+  position: relative;
+  bottom: -2000px;
+  /*margin: 10% auto;*/
+  margin: 170px auto 0px;
+  padding: 5px 20px 13px 20px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #fff;
+  background: -moz-linear-gradient(#fff, #ccc);
+  background: -webkit-linear-gradient(#fff, #ccc);
+  background: -o-linear-gradient(#fff, #ccc);
+  box-shadow: 0 0 10px #000;
+  -moz-box-shadow: 0 0 10px #000;
+  -webkit-box-shadow: 0 0 10px #000;
+}
+.w-hotspot .modalbg .dialog_body {
+  max-height: 500px;
+  overflow: auto;
+}
+.w-hotspot .w-hotspot-img{
+  visibility: hidden;
+  position: absolute;
+}
+.w-hotspot .imageContainer{
+    margin-top: 80px;
+    height: 0px;    
+    padding-bottom: 500px;
+    position: relative;    
+    margin: 80px auto 0px;    
+}
+.w-hotspot .titleContainer{
+	position: absolute;
+  font-weight: 600;
+  top: -34px;
+  left:60px;
+  font-size: 20px;
+}
+.w-hotspot .modalbg .dialog .ie7 {
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#000', Direction=135, Strength=3);
+}
+.w-hotspot .modalbgAnimate {
+  display: block;
+  pointer-events: auto;
+  background: rgba(4, 10, 30, 0.4);
+  -moz-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+/*  -moz-transition-property: bottom, top;
+  -webkit-transition-property: bottom, top;
+  -o-transition-property: bottom, top;
+  transition-property: bottom, top;*/
+}
+.w-hotspot .modalbgAnimate .dialog {
+  bottom: 70px;
+  /*top: -70px;*/
+  -moz-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  -o-transition-delay: 0.4s;
+  -transition-delay: 0.4s;
+}
+.w-hotspot .close {
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #000;
+  -moz-box-shadow: 0 0 10px #000;
+  -webkit-box-shadow: 0 0 10px #000;
+  -moz-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -transition-delay: 0.2s;
+}
+.w-hotspot .close .ie7 {
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#000', Direction=135, Strength=3);
+}
+.w-hotspot .close:hover {
+  background: #00d9ff;
+  -moz-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+.w-hotspot .fineprint {
+  font-style: italic;
+  font-size: 10px;
+  color: #646;
+}
+
+.w-hotspot .button {
+	font-size: 17px;
+	background:#5abbbb;	
+	width:90px;
+	color:#02142b
+  margin: 0px;
+  font-size: 20px;
+  font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+  text-decoration: none;
+  font-weight: 200;
+  cursor: pointer;
+  padding: 10px 21px 13px;
+  position: relative;
+  bottom: -74px; /*Added By Ashok */
+  left: 71%;
+  box-shadow: 1px 1px 1px #fff;
+  -moz-box-shadow: 1px 1px 1px #fff;
+  -webkit-box-shadow: 1px 1px 1px #fff;
+    /*-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;*/
+  text-align: center;
+  /*  display: none;*/
+/*    -moz-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;*/
+}
+
+ .w-hotspot .hotspot_popup {
+    width: 150px;
+    position: absolute;
+    display: none;
+ }
+
+/*.w-hotspot .zoomWrapper{  
+  width: 524px;
+  height: 560px;
+  top: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+*/
+
+@media only screen and (max-width: 320px) {
+ .w-hotspot .w-hotspot-img{
+    width:90%;
+  }
+ } 

@@ -1,0 +1,539 @@
+html, body {
+  height: 90%;
+}
+ 
+#mainframe {
+                width: 100% !important;
+                height: 100% !important;
+}
+ 
+.h-hotspot > div {
+  height:100%;
+}
+
+.h-hotspot
+{
+  position: relative; 
+  margin: 0 auto;
+  /*height:650px;*/
+  height: 100%;
+  width:auto;
+  max-width: 650px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#framecontainer{ 
+  width: 638px;
+  height: 728px;
+  position: relative;
+  margin: auto 0;
+  border: 1px solid #000000;
+}
+
+#mainframe{
+  /*width: 640px;
+  height: 730px;*/
+  width: 640px;
+  height: 600px;
+}
+
+#pageHolder{
+  width: 640px;
+  height: 730px;
+  position: relative;
+  margin: auto 0; 
+}
+
+/*.iScrollVerticalScrollbar {
+  right: -8px !important;
+}*/
+
+.h-hotspot  p{
+	padding: 7px;
+}
+.h-hotspot .hotspot-txt{
+    height: 50px;
+}
+.h-hotspot .popup
+{
+    position: absolute;
+    width: 580px;
+    height:5000px;
+    overflow: auto;
+    background-color: rgba(232, 232, 232, 0.92);
+    padding: 5px;
+    padding: 5px;
+    top: 15%;
+}
+.h-hotspot .commentParagraph{
+	border: 1px solid black;
+  background: #d0cdcd;
+  padding: 10px 0px 0px 10px;
+}
+.h-hotspot .hotspot .notselected{
+  background: white;
+  z-index: 2;
+}
+
+.h-hotspot .hotspot .selected{
+background: rgb(254,252,234); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, rgba(254,252,234,1) 33%, rgba(241,218,54,1) 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, rgba(254,252,234,1) 33%,rgba(241,218,54,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, rgba(254,252,234,1) 33%,rgba(241,218,54,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}	
+.h-hotspot .hotspot .notselected{
+	background-color: FFF !important;
+}
+.h-hotspot .hotspot > div{
+	/*background-color: FFF;*/
+	border: 2px solid black;
+	border-radius: 25px;
+	text-align: center;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+     cursor: pointer;
+     line-height: 23px;
+     width: 23px;
+     height:23px;
+}
+
+
+/* ------------------------------------------------------------------------- MOdel Css ------------------------------------------------------------*/
+
+.h-hotspot .modalbg {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 99999;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
+  -transition-delay: 0.1s;
+  display: block;
+  pointer-events: none;
+}
+.h-hotspot .modalbg .dialog {
+  width: 65%;
+  position: relative;
+  bottom: -1000px;
+  /*margin: 10% auto;*/
+  margin: 170px auto 0px;
+  padding: 5px 20px 13px 20px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #fff;
+  background: -moz-linear-gradient(#fff, #ccc);
+  background: -webkit-linear-gradient(#fff, #ccc);
+  background: -o-linear-gradient(#fff, #ccc);
+  box-shadow: 0 0 10px #000;
+  -moz-box-shadow: 0 0 10px #000;
+  -webkit-box-shadow: 0 0 10px #000;
+}
+.h-hotspot .modalbg .dialog_body {
+  max-height: 500px;
+  overflow: auto;
+}
+
+.h-hotspot .titleContainer{
+	position: absolute;
+  font-weight: 600;
+  top: -34px;
+  left:60px;
+  font-size: 20px;
+}
+.h-hotspot .modalbg .dialog .ie7 {
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#000', Direction=135, Strength=3);
+}
+.h-hotspot .modalbgAnimate {
+  display: block;
+  pointer-events: auto;
+  background: rgba(4, 10, 30, 0.4);
+  -moz-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+/*  -moz-transition-property: bottom, top;
+  -webkit-transition-property: bottom, top;
+  -o-transition-property: bottom, top;
+  transition-property: bottom, top;*/
+}
+.h-hotspot .modalbgAnimate .dialog {
+  bottom: 70px;
+  /*top: -70px;*/
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
+  -transition-delay: 0.1s;
+}
+.h-hotspot .close {
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #000;
+  -moz-box-shadow: 0 0 10px #000;
+  -webkit-box-shadow: 0 0 10px #000;
+  -moz-transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
+  -transition-delay: 0.1s;
+}
+.h-hotspot .close .ie7 {
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#000', Direction=135, Strength=3);
+}
+.h-hotspot .close:hover {
+  background: #00d9ff;
+  -moz-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+.h-hotspot .fineprint {
+  font-style: italic;
+  font-size: 10px;
+  color: #646;
+}
+
+.h-hotspot .button {
+	font-size: 17px;
+	background:/*#5abbbb*/ #FF8200;	
+	width:90px;
+	color:#02142b
+  margin: 0px;
+  font-size: 20px;
+  font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+  text-decoration: none;
+  font-weight: 200;
+  cursor: pointer;
+  padding: 5px 21px 5px;
+  position: relative;
+  margin: 5px 0px;
+  /* left: 78%; */
+  left: 60.5%;
+  box-shadow: 1px 1px 1px #fff;
+  -moz-box-shadow: 1px 1px 1px #fff;
+  -webkit-box-shadow: 1px 1px 1px #fff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  text-align: center;
+  /*  display: none;*/
+/*    -moz-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;*/
+}
+
+ .h-hotspot .hotspot_popup{
+    width: 150px;
+    position: absolute;
+    display: none;
+ }
+
+/*.slider {
+  border-radius: 6px;
+  box-sizing: border-box;
+  height: 50px;
+
+  position: relative;
+  top: 36px; 
+  width: 160px;
+ 
+  float: right;
+  margin: -25px 60px 10px 0px;
+}
+
+.sliderBar {
+    position: relative;
+    width: 90%;
+    margin: 22px auto 0;
+}
+
+.sliderRange {
+    background: white !important;
+}
+
+.sliderCustomize {
+    height: 6px;
+    box-sizing: border-box;
+
+    border: 1px solid #940202;
+    border-radius: 6px;
+  
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3) inset;
+}
+
+.customPlayhead {
+   
+    background: #F2100E none repeat scroll 0 0 !important;
+    border: 5px solid #fff !important;
+    border-radius: 10px !important;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75) !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    height: 19px !important;
+    width: 19px !important;
+    top: -8px !important;
+}*/
+
+/*.zoomWrapper{  
+  width: 524px;
+  height: 560px;
+  top: 10px;
+  overflow: hidden;
+  border: 1px solid #000000;
+  margin: 0 auto;
+  position: relative;
+}*/
+
+@media (max-width: 650px){
+  #mainframe{
+    width: 552px;
+    height: 628px;
+  }
+
+  .h-hotspot
+  {
+    height: 600px;
+  }
+  .h-hotspot .modalbgAnimate .dialog {
+    top: -142px;
+  }
+  .h-hotspot .modalbg .dialog_body {
+    max-height: 226px;
+  }
+  .h-hotspot .button {   
+      left: 73.5%;
+  }
+  .h-hotspot .titleContainer {   
+    left: 10%;
+  }
+}
+
+@media (max-width: 510px){
+  #mainframe{
+   /* width: 400px;
+    height: 450px;*/
+    width: 486px;
+    height: 553px;
+  }
+  .h-hotspot .button { 
+    padding: 5px;
+    font-size: 18px;    
+ /*   position: absolute;    
+    bottom: -50%;*/
+    left: 78%;
+  }
+  .h-hotspot
+  {
+    height: 400px;
+  }
+  .h-hotspot .modalbg .dialog_body{
+    max-height: 310px;
+  }   
+  #firstname { 
+    background-color: yellow;
+  }
+  .h-hotspot .titleContainer {    
+    top: -37px;
+    left: 26px;
+  }
+}
+
+@media (max-width: 390px){
+  .h-hotspot .titleContainer {
+    top: -52px;
+    left: 4px;
+  }
+  #mainframe {
+    width: 368px;
+    height: 422px;
+  }
+  .h-hotspot .button {
+    /*bottom: -18%;*/
+    left: 71%;
+  }
+}
+
+@media (max-width: 340px){ 
+  #mainframe{
+    width: 100%;
+    height: 308px;
+  }
+  .h-hotspot .titleContainer {
+    font-size: 15px;
+    left: 0px;
+    margin-top: 9px;
+  } 
+  .h-hotspot .button{
+    left: 62%;
+    font-size: 15px;
+    bottom: 5px;
+  }  
+  .h-hotspot
+  {
+    height: 260px;
+  }
+
+  .h-hotspot .modalbg .dialog_body{
+    max-height: 166px;
+  }
+} 
+
+
+/* Portrait and Landscape 5, 5S, 5C and 5SE */
+ /*and (max-device-width: 568px)*/
+@media only screen 
+  and (min-device-width: 320px)  
+  and (-webkit-min-device-pixel-ratio: 2) {
+  .h-hotspot
+  {
+    height: 100%;
+  }
+  .h-hotspot .titleContainer {
+    font-size: 15px;
+    width: 270px;
+  }
+
+  #mainframe{
+    width: 290px;
+    height: 450px;
+    margin-top: 20px;
+  }
+  .h-hotspot .button { 
+    padding: 5px;
+    font-size: 15px;    
+  /*  position: absolute;    
+    bottom: 17%;*/
+    left: 62%;
+  }
+   
+  .h-hotspot .modalbg .dialog_body{
+    max-height: 250px;
+  }
+}
+/*end  iPhone 5, 5S, 5C and 5SE*/
+
+/* Portrait and Landscape iPhone 6, 6S, 7 and 8*/
+ /*and (max-device-width: 667px) */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+  .h-hotspot
+  {
+    height: 100%;
+  }
+  .h-hotspot .titleContainer {
+    font-size: 15px;
+    width: 270px;
+  }
+
+  #mainframe{
+    width: 350px;
+    height: 450px;
+    margin-top: 20px;
+  }
+
+  .h-hotspot .button { 
+    padding: 5px;
+    font-size: 15px;    
+   /* position: absolute;    
+    bottom: -15%;*/
+    left: 62%;
+  }
+      
+}
+/*end  iPhone 6, 6S, 7 and 8*/
+
+/* Portrait and Landscape iPhone 6+, 7+ and 8+ */
+ /*and (max-device-width: 736px) */
+@media only screen 
+  and (min-device-width: 414px)  
+  and (-webkit-min-device-pixel-ratio: 3) {
+  .h-hotspot
+  {
+    height: 100%;
+  }  
+
+  .h-hotspot .titleContainer {
+    font-size: 18px;
+    top: -40px;
+    left: 3px;
+    width: 360px;
+  }
+
+  #mainframe{
+    width: 380px;
+    height: 450px;
+    margin-top: 20px;
+  }
+
+  .h-hotspot .button { 
+    padding: 5px;
+    font-size: 18px;    
+   /* position: absolute;    
+    bottom: -5%;*/
+    left: 70.5%;
+  }
+}
+
+/* ipad Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  #mainframe{
+    width: 640px;
+    height: 730px;
+  }
+  .h-hotspot .titleContainer{
+    position: absolute;
+    width: 100%;
+    font-weight: 600;
+    top: -34px;
+    left:60px;
+    font-size: 20px;
+  }
+  .h-hotspot .button { 
+    padding: 5px;
+    font-size: 20px;    
+/*    position: absolute;    
+    bottom: -8%;*/
+    left: 83%
+  }
+}
+
+

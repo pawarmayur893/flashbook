@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+	<link rel="stylesheet" href="style/style.css"/>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body style="margin:0px">
+	<div id="pageHolder">			
+		<iframe id='framecontainer' src="activity.html" scrolling="no" allowFullScreen="true" frameborder="0"></iframe>	
+	</div>
+	<script type="text/javascript">
+	    jqnc(document).ready(function(){	    	
+	    	fullscreenify();
+	    });	    
+		function fullscreenify() {			
+	        pageHolder = document.getElementById('pageHolder')
+	        pageHolderWidth = jqnc('#pageHolder').width()
+	        pageHolderHeight = jqnc('#pageHolder').height()
+	        var style = pageHolder.getAttribute('style') || '';
+	        window.addEventListener('resize', function() {
+	            resize(pageHolder);
+	        }, false);
+	        resize(pageHolder, style);
+	    }
+
+	    function resize(pageHolder, style) {
+	       var scale = {
+	            x: 1,
+	            y: 1
+	        };
+	        scale.x = ((window.innerWidth) / pageHolderWidth);
+	        scale.y = ((window.innerHeight) / pageHolderHeight);
+	        if (scale.x < scale.y) {
+	            scale = scale.x + ',' + scale.x;
+	        } else {
+	            scale = scale.y + ',' + scale.y;
+	        }
+	        console.log('scale ', scale);
+	        //scale = Number(String(scale.split(','))[0]);
+	        var newWidth = Number(scale.split(','))[0] * pageHolderWidth;
+	        var leftPos = (window.innerWidth - newWidth) / 2;
+	        //scale = Number(scale.split(','))[0];
+	        pageHolder.setAttribute('style', style + ' ' + '-ms-transform-origin: left top; -webkit-transform-origin: left top; -moz-transform-origin: left top; -o-transform-origin: left top; transform-origin: left top; -ms-transform: scale(' + scale + '); -webkit-transform: scale3d(' + scale + ', 1); background: #FFFFFF; position:absolute; top:0px; left:' + leftPos + 'px; -moz-transform: scale(' + scale + '); -o-transform: scale(' + scale + '); transform: scale(' + scale + '); background-color:transparent;');
+	        console.log(((jqnc("body").width() - jqnc("#Menu").width()) / 2) + "px");	        
+	    }
+	</script>
+</body>
+</html>    
